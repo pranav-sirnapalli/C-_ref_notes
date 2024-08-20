@@ -1,0 +1,22 @@
+//Initialisation and declaration of 2D arrays
+
+#include<iostream>
+
+using namespace std;
+
+void main()
+{
+   int myArray1[5][5]; // declaration
+   int myArray2[2][2] = {1, 2, 3, 4}; // declaration with initialisation
+   int myArray3[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+   // printing 2D array
+   for(int i=0; i<3; i++)
+   {
+	for(int j=0; j<3; j++)
+	{
+		cout << myArray3[i][j];
+	}
+
+   }
+}
