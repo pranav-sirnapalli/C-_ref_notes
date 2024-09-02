@@ -1,0 +1,73 @@
+To include all header files in one use:
+# include<bits/stdc++.h>
+
+To Print output in same line:
+
+void main()
+{
+   int n1, n2;
+   n1 = 10;
+   n2 = 20;
+   cout << n1;
+   cout << n2;
+}
+
+To print output in next line:
+
+void main()
+{
+   int n1, n2;
+   n1 = 10;
+   n2 = 20;
+   cout << n1 << endl;
+   cout << n2;
+
+}
+
+
+to find length of string build-in function:
+
+string s = "hello";
+cout << s.length();
+
+to find size of array
+
+int numbers = {10, 20, 30, 40, 50, 60};
+int tot_size = sizeof(numbers) / sizeof(numbers[0]);
+
+for-each loop
+
+int arr[] = {10, 20, 30, 40, 50};
+for(int i:arr)
+{
+   cout << i<< endl;
+}
+
+Predefined functions in C++, also known as built-in functions or standard library functions, are functions that are already provided by the C++ programming language itself or by standard libraries.
+Predefined functions are ready to use and can be directly incorporated into your C++ programs without needing to create their definitions.
+
+Here are some common categories of predefined functions in C++.
+
+Input/Output Functions:
+You would have to include iostream package to use these functions cout: Used to print formatted output to the console.
+cin: Used to read formatted input from the console.
+setprecision : Used to set the ios library floating point precision based on the precision specified as the parameter to this method.
+
+Mathematical Functions:
+You would have to include cmath package to use these functions sqrt(): Calculates the square root of a number.
+abs(): Calculates the absolute value of a number.
+pow(): Calculates the power of a number.
+ceil(), floor(): Round a number to the nearest integer.
+
+Memory operators:
+new : Allocate memory dynamically.
+delete : Deallocate memory.
+
+Time Functions:
+time(): Get the current time.
+ctime(): Convert time to a string.
+difftime(): Calculate the difference between two times.
+
+File Handling Functions:
+fopen(), fclose(): Open and close files.
+fread(), fwrite(): Read and write data from/to files.

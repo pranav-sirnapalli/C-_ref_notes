@@ -1,0 +1,12 @@
+Recursion: - Technique where a function calls itself to solve a problem.
+	   - Sample Code:
+	     
+	     int factorail(int n)
+	     {
+		if(n == 1 || n == 0)
+		{
+		   return 1;
+		}
+
+		return n * factorial(n-1);
+	     }

@@ -1,0 +1,14 @@
+// Stack data structure theory
+
+- LIFO (Last in first out)
+- Linear DS
+- Abstract data type with a bounded capacity
+- Items added on top of stack with PUSH operation
+- Items removed from top of stack with POP operation
+- Standard stack opern:
+  push(), pop(), isEmpty(), isfull(), peek(), count()
+  change(), display()
+
+
+
+

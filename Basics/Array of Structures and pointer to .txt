@@ -1,0 +1,65 @@
+//Array of Structures and pointer to structure:
+ 
+Sample code of array of structure:
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+struct Person{
+  string name;
+  int age;
+  double salary;
+};
+
+void main()
+{
+   Person p[2];
+   cout << "Enter person details like name, age and salary" << endl;\
+   for(int i=0; i<2; i++)
+   {
+      cin >> p[i].name;
+      cin >> p[i].age;
+      cin >> p[i].salary;
+   }
+   cout << "Details of users: " << endl;
+   for(int i=0; i<2; i++)
+   {
+	cout << "details of person" << (i+1) << endl;
+        cout << "name: " << p[i].name << endl;
+  	cout << "age: " << p[i].age << endl;
+	cout << "salary: " << p[i].salary << endl;
+   }
+}
+
+Sample code of pointer to structure:
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+struct Person{
+   string name;
+   int age;
+   double salary;
+};
+
+
+void main()
+{
+   Person p1;
+   cout << "Enter details of person " << endl;
+   cin >> p1.name;
+   cin >> p1.age;
+   cin >> p1.salary;
+
+   cout << "Details of person are as follows:"<<endl;
+   
+   Person *ptr = &p1;
+
+   cout << "name: " << ptr->name;
+   cout << "age: " << ptr->age;
+   cout << "salary: " << ptr->salary;
+}

@@ -1,0 +1,19 @@
+Insertion Sort:
+
+Insertion sort is a simple sorting algorithm that builds the final sorted array one element at a time.
+It works by repeatedly taking an element from the unsorted portion of the array and inserting it into its correct position within the sorted portion of the array.
+
+Here are the steps for insertion sort:
+
+- Start with the second element (index 1) of the array. The first element (index 0) is considered already sorted.
+
+- Compare the current element with the previous elements in the sorted portion of the array (to its left).
+
+- If the current element is smaller (for ascending order) or larger (for descending order) than the compared element, shift the compared element to the right to make space for the current element.
+
+- Repeat step 3 until you find the correct position for the current element in the sorted portion.
+
+- Insert the current element into its correct position within the sorted portion.
+
+- Move to the next unsorted element and repeat steps 2-5 until all elements are sorted.
+
