@@ -1,0 +1,54 @@
+#include<iostream>
+
+using namespace std;
+
+int maximum(int, int);
+
+void main()
+{
+   int a, b;
+   cout << "Enter two numbers to find greatest:";
+   cin >> a >> b;
+   int res = maximum(a, b);
+   cout << res;
+}
+
+int maximum(int x, int y)
+{
+   if(x > y)
+      return x;
+   else
+      return y;
+}
+
+// Inline functions: 
+   - Compiler places copy of the code of that function at each point where the function is called at compile point.
+   - any change to an inline function could require it to be recompiled as compiler would need to replace all the code once
+     again otherwise it will continue with old functional code.
+   - It can be used to reduce execution time as their is no change in flow control.
+   - Syntax: 
+	inline return-type function-name(parameters){
+		// function code
+	}
+
+// Example of inline function:
+
+#include<iostream>
+
+using namespace std;
+
+inline int add(int, int);
+
+void main()
+{
+   int a, b;
+   a = 4;
+   b = 5;
+   int c = add(a, b);
+   cout << c;
+}
+
+inline int add(int a, int b)
+{
+   return (a + b);
+}

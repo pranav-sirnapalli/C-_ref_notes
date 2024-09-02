@@ -1,0 +1,44 @@
+File Handling:
+
+- Stream is an abstraction that represents a device on which input
+  and output operations are performed.
+
+- Stream can basically be represented as a source or destination
+  of characters of indefinite length.
+
+Sample code:
+
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+
+void main()
+{
+   char arr[100];
+   cout << "Enter your name and age:";
+   cin.getline(arr, 100);
+
+   ofstream myfile("xyz.txt"); // It has been opened to write in
+   // ofstream myfile("xyz.txt", ios::app); It should be opened like this when we want to append
+   //myfile.open("xyz.txt"); it opens  automatically when above line is added
+   myfile<<arr;
+   myfile.close();
+
+   char arr1[100];
+   ifstream obj("xyz.txt");
+   obj.getline(arr1, 100);
+   cout << "array content" << arr1;
+   obj.close();
+
+   // Another way to write above code
+   // fstream myfile("xyz.txt", ios::out);
+   // myfile << arr;
+   // myfile.close();
+
+   // fstream myfile("xyz.txt", ios::in);
+   // myfile.getline(arr1, 100);
+   // cout << arr1;
+   // myfile.close();
+
+}

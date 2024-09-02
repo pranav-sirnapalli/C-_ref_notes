@@ -1,0 +1,52 @@
+//Function overloading:
+  - Feature where two or more functions can have same name but different parameters.
+  - It is a type of polymorphism in C++.
+
+  - Overloaded function must have:
+    - Different type of parameters
+    - Different number of parameters
+    - Different sequence of parameters
+
+  - Eg:
+	- void print();
+	- void print(int a);
+	- void print(float a);
+	- void print(int a, int b);
+	- void print(int a, double b);
+	- void print(double a, int b);
+
+- Code example of function overloading:
+
+int add(int a, int b)
+{
+   return (a+b);
+}
+
+double add(double a, double b)
+{
+   return (a+b);
+}
+
+int add(int a, int b, int c)
+{
+   return (a+b+c);
+}
+
+double add(int a, double b)
+{
+   return(a+b);
+}
+
+double add(double a, int b)
+{
+   return(a+b);
+}
+
+void main()
+{
+   cout << add(1, 2) << endl;
+   cout << add(3.5, 4.5) << endl;
+   cout << add(3, 4, 5) << endl;
+   cout << add(3, 4.5) << endl;
+   cout << add(3.5, 4) << endl;
+}

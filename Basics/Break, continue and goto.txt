@@ -1,0 +1,43 @@
+Break- Used to exit a loop when a condition is met
+- Allows you to immediately exit a loop based on a specific condition,
+  even if loops normal exit condition hasn't been met.
+- In nested loops, it will exit the inner most loop.
+
+Continue- Used to skip one iteration in the loop, if a specified
+	  condition occurs and continues with the next iteration in loop.
+	- Code example:
+	  for(int i=1; i<=limit; i++)
+ 	  {
+		if(i % 2 == 0)
+		{
+		   continue; // Skip the odd numbers
+		}
+		cout << i << endl;
+	  }
+
+Goto- It allows you to transfer control to a labeled statement in your program,
+      allowing non-linear program flow.
+
+     -  Code Example:
+	#include<iostream>
+	using namespace std;
+
+	int main()
+ 	{
+	   int n = 10;
+	   int target = 5;
+
+	   for(int i=0; i<n; i++)
+	   {
+		cout << "Iteration " << i << "\n"; 
+		
+		if(i == target)
+		{
+		   goto end;
+		}
+	   }
+	   end:
+	   cout << "Loop ended at iteration " << target << "\n";
+	   return 0;
+	}
+	

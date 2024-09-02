@@ -1,0 +1,78 @@
+// Call by value:
+
+	- The call by value method to a function copies the actual value of an argument into the
+	  formal parameter of the function.
+	- Changes made to the parameter inside the function have no effect on argument
+	- Default call by value is used within a function and cannot alter the arguments used to
+	  call the function
+Sample code:
+
+#include<iostream>
+
+using namespace std;
+
+void passByValue(int, int)
+{
+   int z = x;
+   x = y;
+   y = z;
+}
+
+void main()
+{
+   int a= 5, b = 6;
+   cout << "Before Swapping" << endl << "a: " << a << endl << "b: " << b << endl;
+   passByValue(a, b);
+   cout << "After Swapping" << endl << "a: " << a << endl << "b: " << b << endl;
+}
+
+// Call by Reference:
+
+	- Call by reference method of passing arguments to a function copies the reference of an argument
+	  into the formal parameter.
+	- Inside the function, the reference is used to access the actual arguments used in the call. This
+	  means that changes made to the parameters affect the passed argument.
+	- To pass value by reference argument reference is passed to the functions just like any other value.
+
+Sample Code:
+
+void passByReference(int &x, int &y)
+{
+   int z = x;
+   x = y;
+   y = z;
+}
+
+void main()
+{
+   int a = 5, b = 6;
+   cout << "Before Swapping" << a << b;
+   passByReference(a, b);
+   cout << "After Swapping" << a << b;
+}
+
+
+// Pass by pointer or call by address
+
+- It copies the address of an argument into the formal parameter.
+
+- Inside the function, address is used to access the actual argument used in the call.
+  This means that changes made to the parameter affect the passed argument.
+
+- Argument pointers are passed to the function just like any other value.
+
+void passByAddress(int *x, int *y)
+{
+   int z = *x;
+   *x = *y;
+   *y = z;
+}
+
+void main()
+{
+   int a = 5, b = 6;
+   cout << "Before Swapping" << a << b;
+   passByAddress(&a, &b);
+   cout << "After Swapping" << a << b;
+}
+

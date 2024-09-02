@@ -1,0 +1,43 @@
+-Exception Handling:
+
+- Unexpected problem that arises during execution of a program.
+
+- This mechanism provide a way to transfer control from one part of program
+  to another, makes it easy to separate error handling code from code written
+  to handle actual functionality.
+
+- C++ does exception handling using: try, catch and throw.
+
+- Try: block of code that may cause an exception put here.
+
+- Catch: catches the exception thrown from try block.
+
+- Throw: program throws an exception when a problem shows up
+
+
+Sample code:
+
+#include<iostream>
+
+using nampespace std;
+
+void main()
+{
+   int numerator, denominator, result;
+   cout << "Enter 2 numbers:" << endl;
+   cin >> numerator >> denominator
+   try
+   {
+	if(denominator == 0)
+	{
+	  throw denominator;
+	}
+	result = numerator / denominator;
+   }
+   
+   catch(int ex)
+   {
+	cout << "Exception: Divide by zero not allowed" << ex;
+   }
+   cout << result;   
+}

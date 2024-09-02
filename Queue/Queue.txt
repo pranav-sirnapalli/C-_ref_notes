@@ -1,0 +1,6 @@
+Queue:
+
+- Linear data structure operates as Last IN Last OUT
+- It will have a bounded capacity
+- Elements added at one end(the rear end) is called Enqueue.
+- Elements removed from the other end(the head) is called Dequeue.

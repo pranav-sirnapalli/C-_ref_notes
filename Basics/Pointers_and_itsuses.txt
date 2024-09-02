@@ -1,0 +1,74 @@
+Pointers
+A pointer is a variable that stores the memory address of another variable.
+It allows you to indirectly access and manipulate the value of the variable it points to.
+
+In a computer, memory is a collection of storage locations, each with a unique address.
+These memory locations are used to store various types of data, including variables, constants, program instructions, and more.
+When you declare a variable in a programming language like C++, the compiler assigns a specific memory location to that variable.
+
+int main() {
+    int age = 25;
+    cout << "Address of age: " << &age;
+    return 0;
+}
+
+Pointer declaration - while variables store the actual value - pointers store the addresses The syntax for declaring a pointer is as follows
+data_type *pointer_name;
+
+Pointer initialisation - After declaring a pointer, you typically initialize it with the memory address of another variable. This allows the pointer to "point" to that variable. You can use the address-of operator (&) to obtain the memory address of a variable.
+
+Sample syntax
+int main() {
+    int num = 42; // Declare and initialize an integer variable
+    int *ptr;     // Declare a pointer to an integer
+    ptr = &num;   // Initialize the pointer with the address of 'num'
+    return 0;
+}
+
+Pointer Incrementing:
+To print all values in array using pointer
+
+#include<iostream>
+using namespace std;
+
+void main()
+{
+   int numbers = {10, 20, 30, 40, 50};
+   int *ptr = &numbers;
+
+   for(int i=0; i<5; i++)
+   {
+      cout << *ptr << endl;
+      ptr++;
+   }
+}
+
+Call by Value(generally used):
+
+int increment(int x)
+{
+   x++;
+   cout << x << endl;
+}
+
+
+void main()
+{
+   int x = 10;
+   increment(x);
+}
+
+
+Call by Refernece(Done using pointers):
+
+void increment(int* x)
+{
+   (*x)++;
+}
+
+void main()
+{
+   int val = 10;
+   increment(&val);
+}
+

@@ -1,0 +1,55 @@
+Bubble Sort:
+
+Rules to design bubble sort:
+
+bubble sort as a simple sorting algorithm that repeatedly steps through the list to be sorted, compares adjacent elements, and swaps them if they are in the wrong order.
+
+Here's the step-by-step algorithm for the bubble sort:
+
+- Start from the first element (index 0) and compare it with the next element (index 1).
+
+- If the current element is greater than the next element, swap them.
+
+- Move to the next pair of elements and repeat step 2 until the last pair of elements.
+
+- After the first pass, the largest element will have "bubbled up" to the last position.
+
+- Repeat the above steps for the remaining unsorted portion of the array (excluding the last sorted  element).
+
+- Continue this process until no more swaps are needed, indicating the array is sorted.
+
+#include<iostream>
+
+using namespace std;
+
+void bubbleSort(int arr[], int size)
+{
+   for(int i=0; i<size-1; i++)
+   {
+        for(int j=0; j<size-i-1; j++)
+	{
+	   if(arr[j] > arr[j+1])
+ 	   {
+		int swap = arr[j];
+		arr[j] = arr[j+1];
+		arr[j+1] = swap;
+	   }
+	}
+   }
+}
+
+
+
+int main()
+{
+   int N;
+   cin >> N;
+
+
+   int arr[N];
+   for(int i=0; i<N; i++)
+   {
+	cin >> arr[i];
+   }
+   bubbleSort(arr, N);
+}
